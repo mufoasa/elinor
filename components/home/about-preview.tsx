@@ -31,11 +31,6 @@ export function AboutPreview() {
               />
             </div>
 
-            {/* Decorative elements */}
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 md:w-48 md:h-48 bg-primary/10 rounded-2xl -z-10" />
-            <div className="absolute -top-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-accent rounded-2xl -z-10" />
-          </div>
-
           {/* Content */}
           <div className="lg:pl-8">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
