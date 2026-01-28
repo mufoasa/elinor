@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-sans' });
 export const metadata: Metadata = {
   title: 'Elinor Real Estate | Find Your Dream Home',
   description: 'Elinor Real Estate - Your trusted partner in finding the perfect property. Browse apartments, houses, and land for sale or rent.',
-    generator: 'v0.app'
+    
 }
 
 
