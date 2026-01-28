@@ -31,7 +31,6 @@ export function AboutPreview() {
               />
             </div>
             {/* Decorative element */}
-            
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10" />
           </div>
 
