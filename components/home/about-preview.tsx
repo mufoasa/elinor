@@ -17,9 +17,9 @@ export function AboutPreview() {
   ]
 
   return (
-    <section className="py-16 lg:py-24 bg-secondary">
+    <section className="py-16 lg:py-24 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
           {/* Image */}
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
@@ -30,9 +30,10 @@ export function AboutPreview() {
                 className="object-cover"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary/10 rounded-2xl -z-10" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10" />
+
+            {/* Decorative elements */}
+            <div className="absolute -bottom-6 -right-6 w-36 h-36 md:w-48 md:h-48 bg-primary/10 rounded-2xl -z-10" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-accent rounded-2xl -z-10" />
           </div>
 
           {/* Content */}
