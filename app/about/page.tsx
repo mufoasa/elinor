@@ -82,7 +82,8 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                 </div>
+               
+              
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
                   {t("about.story.title")}
