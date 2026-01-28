@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { useLanguage } from "@/lib/i18n/context"
 import { Card, CardContent } from "@/components/ui/card"
-import { Shield, Award, Heart, Users } from "lucide-react"
+import { Shield, Award, Heart } from "lucide-react"
 
 export default function AboutPage() {
   const { t } = useLanguage()
@@ -56,10 +56,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 bg-background">
+      <main className="flex-1 bg-background overflow-x-hidden">
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-28 bg-secondary overflow-hidden">
-          <div className="container mx-auto px-4 text-center relative z-10">
+        <section className="relative py-20 lg:py-28 bg-secondary">
+          <div className="container mx-auto px-4 max-w-full text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
               {t("about.title")}
             </h1>
@@ -71,10 +71,10 @@ export default function AboutPage() {
 
         {/* Story Section */}
         <section className="py-16 lg:py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="relative">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+          <div className="container mx-auto px-4 max-w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+              <div className="relative w-full max-w-full">
+                <div className="relative w-full max-w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
                     alt="Elinor Team Meeting"
@@ -82,9 +82,8 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-               
-              
-              <div>
+              </div>
+              <div className="w-full max-w-full">
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
                   {t("about.story.title")}
                 </h2>
@@ -104,8 +103,8 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section className="py-16 bg-primary">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="container mx-auto px-4 max-w-full">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-full">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="font-serif text-4xl md:text-5xl font-semibold text-primary-foreground mb-2">
@@ -120,15 +119,15 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="py-16 lg:py-24">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-full">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 {t("about.values.title")}
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-full">
               {values.map((value) => (
-                <Card key={value.title} className="text-center">
+                <Card key={value.title} className="text-center w-full max-w-full">
                   <CardContent className="p-8">
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
                       <value.icon className="w-8 h-8 text-primary" />
@@ -146,7 +145,7 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <section className="py-16 lg:py-24 bg-secondary">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-full">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 Meet Our Team
@@ -155,10 +154,10 @@ export default function AboutPage() {
                 Dedicated professionals committed to helping you find your perfect property.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-full mx-auto">
               {team.map((member) => (
-                <Card key={member.name} className="overflow-hidden">
-                  <div className="relative aspect-square">
+                <Card key={member.name} className="overflow-hidden w-full max-w-full">
+                  <div className="relative w-full max-w-full aspect-square">
                     <Image
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
