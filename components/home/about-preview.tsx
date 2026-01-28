@@ -18,11 +18,11 @@ export function AboutPreview() {
 
   return (
     <section className="py-16 lg:py-24 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+      <div className="container mx-auto px-4 max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
           {/* Image */}
-          <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative w-full max-w-full">
+            <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="https://i.imgur.com/X3HCOiI.jpeg"
                 alt="Elinor Real Estate Team"
@@ -31,8 +31,13 @@ export function AboutPreview() {
               />
             </div>
 
+            {/* Decorative elements */}
+            <div className="absolute bottom-0 right-0 w-20 h-20 md:w-48 md:h-48 bg-primary/10 rounded-2xl -z-10" />
+            <div className="absolute top-0 left-0 w-16 h-16 md:w-32 md:h-32 bg-accent rounded-2xl -z-10" />
+          </div>
+
           {/* Content */}
-          <div className="lg:pl-8">
+          <div className="lg:pl-8 w-full max-w-full">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               {t("home.about.title")}
             </h2>
