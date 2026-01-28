@@ -21,8 +21,8 @@ export function AboutPreview() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative w-full max-w-full">
+            <div className="relative w-full max-w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="https://i.imgur.com/X3HCOiI.jpeg"
                 alt="Elinor Real Estate Team"
@@ -30,12 +30,10 @@ export function AboutPreview() {
                 className="object-cover"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10" />
           </div>
 
           {/* Content */}
-          <div className="lg:pl-8">
+          <div className="lg:pl-8 w-full max-w-full">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               {t("home.about.title")}
             </h2>
